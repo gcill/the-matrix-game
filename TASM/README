@@ -1,0 +1,113 @@
+HELPPC 1.5      PC Programmers Utility      Copyright (c) 1989, David Jurgens
+
+Background
+==========
+
+This utility is comprised of a collection of information found in manufacturer
+technical reference manuals, various commercial books, technical topics
+discussed on CompuServe, public domain articles and my own snooping.  All
+organized in a single database.  The help topics includes BIOS interrupts, DOS
+interrupts and functions, EMS functions, Mouse functions, BIOS and DOS data
+structures, diagnostic codes, DOS commands, 80x86 assembler
+instructions/directives and Standard C functions.
+
+As programmers, we tend to gather massive amounts of books, journals and
+magazines.   Most of these items have some important detail that is generally
+out of reach since we can't carry them everywhere.   That's why I started this
+project, to free myself from having to first find the manuals or articles and
+then weed through all the mundane text to get to a simple answer.   In the
+past few years it has saved me a lot of time previously spent rummaging
+through manuals.  I do occasionally pick up my war torn copies of Norton and
+Duncan.  You'll find the screen displays are brief and to the point.  So, if
+you need more in depth information, I'd recommend Peter Norton's "Programmers
+Guide to the IBMPC", Ray Duncan's  "Advanced MSDOS for C and Assembler",
+Compute's  "Mapping the IBMPC and PCjr", a variety of the IBM Technical
+Reference Manuals.
+
+The program which is less that 5K in size is written in Turbo C with a little
+TASM sprinkled in for optimization.
+
+Audience
+========
+
+This program is designed for the PC programmer who knows what he's doing, but
+just can't remember the syntax, or parameters to some little used BIOS/DOS
+interrupt, BIOS/DOS data structure, C function, assembler instruction or just
+about any technical issue on the PC or PS/2.
+
+Usage
+=====
+
+Type TechRef at the DOS prompt for a description of how to use this program
+and the possible arguments.   For information on proper installation type
+TechRef while in the directory containing the GENERIC.HLP file.
+
+Aborting
+========
+
+The Esc key or a  Ctrl C  can be used to abort the program display.
+
+43/50 Line users
+================
+
+43/50 line mode will display different behavior than the 25 line mode. Many
+version of DOS only understand 25 line screens, so TechRef clears lines 25/43
+on exit to avoid an odd screen display.  This is a problem in DOS and not
+TechRef.
+
+Files in Release
+================
+
+README      -  The file you're reading now.
+
+TechRef.COM -  A display utility that reads the indexed database and displays
+               the information.   Type TechRef for a description of usage.
+               I recommend that you rename this program to something you find
+               convenient to use like "H.COM" or "HELP.COM".
+
+GENERIC.HLP -  Is the forever growing database file containing all the
+               technical data and a built in index.   TechRef.COM finds this
+               file through the environment variable "HLP".  Versions of this
+               database without the C and/or assembler instructions are
+               available to alleviate disk requirements.
+
+
+Installation
+============
+
+Installation requires two steps.  First, simply dearchive the TechRef.ARC
+file.   Second issue the following command:
+
+SET HLP=d:dirname           (no blanks, except between "SET HLP")
+
+where d: id the drive and dirname is the directory where the GENERIC.HLP file
+exists. The TechRef.COM file can exist anywhere that it can be accessed
+through the DOS command search path (PATH).
+
+The name TechRef was chosen to avoid conflict with the HELP command available
+with later versions of DOS.  I'd recommend that you rename TechRef.COM to a
+name you find convenient and easy to remember like "H.COM" or "HELP.COM".
+For a description command usage, type TechRef at the DOS prompt with no
+arguments.
+
+
+In Closing
+==========
+
+Try it, break it or just tell me what you did or didn't like about it or what
+you'd like to see added.   If you find any discrepancies, errors or typos, I
+would appreciate corrections and any suggestions for improvement. If at all
+possible, please contact me using one of the below addresses and I will try to
+correct the problem.   A TSR version and the help file generator will soon be
+released as shareware.
+
+Also, if you distribute this software, I ask that you distribute it in it's
+original .ZIP or LHARC form, without modification.   This version is freeware
+and may be distributed freely, as long as no one profits from the sale.  This
+excludes a modest disk duplication fee charged by most user groups. While on
+the subject, please support your local computer user groups.  These are the
+best sources of help and information available.  As the Columbus Computer
+Society slogan says it's "The Best Investment For Your PC".  I am an active
+member of the Columbus Computer Society and have learned a great deal about
+computers and other subjects from my interactions.
+
